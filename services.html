@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Neczux Global Group Services — Technology & Automation, Creative Design, Strategic Growth & Training. Integrated solutions for complete business growth.">
+    <meta name="keywords" content="business services, technology solutions, automation, creative design, strategic growth, business training, Accra Ghana">
+    <meta name="author" content="Neczux Global Group Ltd.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.neczuxglobal.com/services.html">
+    <meta property="og:title" content="Our Services | Neczux Global Group">
+    <meta property="og:description" content="Technology & Automation, Creative Design, Strategic Growth & Training — integrated solutions for complete business growth.">
+    <meta property="og:image" content="https://www.neczuxglobal.com/ngg-images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Services | Neczux Global Group">
+    <meta name="twitter:description" content="Integrated business solutions for complete growth.">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <title>Our Services | Neczux Global Group | Integrated Business Solutions</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="ngg-images/favicon.ico">
+    
+    <style>
+        /* Service nav pills - additional styling */
+        .service-nav {
+            background: var(--white-pure);
+            border-bottom: 1px solid rgba(0,15,122,0.08);
+            padding: 0;
+            position: sticky;
+            top: 72px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+        .service-nav-inner {
+            display: flex;
+            gap: 0.25rem;
+            padding: 0.75rem 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .service-nav-inner::-webkit-scrollbar { display: none; }
+        .nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--gray-mid);
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .nav-pill:hover, .nav-pill.active {
+            background: var(--navy);
+            color: var(--white-pure);
+            border-color: var(--navy);
+        }
+        .nav-pill i { font-size: 0.9rem; }
+
+        .product-link-box {
+            background: linear-gradient(135deg, rgba(46,207,190,0.06), rgba(0,15,122,0.04));
+            border: 1px solid rgba(46,207,190,0.2);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+        .product-link-box h3 { 
+            color: var(--navy); 
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+        .product-link-box p  { 
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Cookie Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
+                <a href="/privacy-policy" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="ngg-images/NGG.png" alt="Neczux Global Group Logo" width="38" height="38">
+                    <span class="logo-text">Neczux Global Group</span>
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="services.html" class="dropdown-toggle active" aria-current="page">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-grid">
+                                    <a href="services.html#tech-automation" class="dropdown-column">
+                                        <h4><i class="fas fa-robot"></i> Technology & Automation</h4>
+                                        <p>Websites, apps, systems & workflow automation</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="services.html#creative-design" class="dropdown-column">
+                                        <h4><i class="fas fa-palette"></i> Creative Design</h4>
+                                        <p>Brand identity, digital content & marketing systems</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="services.html#strategic-growth" class="dropdown-column">
+                                        <h4><i class="fas fa-chart-line"></i> Strategic Growth & Training</h4>
+                                        <p>Business strategy, venture building & team training</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="products.html" class="dropdown-column">
+                                        <h4><i class="fas fa-box-open"></i> Product & Resource Store</h4>
+                                        <p>Hardware, software, connectivity & digital tools</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+                    </ul>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">What We Deliver</span>
+                <h1>Complete Service Architecture</h1>
+                <p class="hero-subtitle">Integrated pillars for complete business growth</p>
+                <p class="hero-description">
+                    Three consolidated service pillars — all designed to work as one system, supporting your business
+                    across its full growth lifecycle from ideation to scale.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== SERVICE NAV PILLS ===== -->
+        <nav class="service-nav" aria-label="Service navigation">
+            <div class="container">
+                <div class="service-nav-inner">
+                    <a href="#tech-automation" class="nav-pill active" data-service="tech-automation">
+                        <i class="fas fa-robot"></i> Technology & Automation
+                    </a>
+                    <a href="#creative-design" class="nav-pill" data-service="creative-design">
+                        <i class="fas fa-palette"></i> Creative Design
+                    </a>
+                    <a href="#strategic-growth" class="nav-pill" data-service="strategic-growth">
+                        <i class="fas fa-chart-line"></i> Strategic Growth & Training
+                    </a>
+                    <a href="products.html" class="nav-pill">
+                        <i class="fas fa-box-open"></i> Product Store
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ===== SERVICE ARCHITECTURE ===== -->
+        <section class="service-architecture">
+            <div class="container">
+
+                <!-- PILLAR 01: Technology & Automation -->
+                <div class="service-pillar" id="tech-automation">
+                    <div class="pillar-header">
+                        <div class="pillar-number">01</div>
+                        <div class="pillar-title">
+                            <h2>Technology & Automation Systems</h2>
+                            <p class="pillar-tagline">We build the functional backbone that powers modern ventures.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-content">
+                        <div class="service-list">
+                            <div class="service-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h4>Websites & Digital Platforms</h4>
+                                    <p>Responsive, scalable web solutions — from landing pages to full business platforms.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Application Development</h4>
+                                    <p>Custom software and mobile applications tailored to your business processes.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h4>Business Systems & Process Automation</h4>
+                                    <p>Workflow automation, CRM integration, and business process optimization.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-plug"></i>
+                                <div>
+                                    <h4>Forms, Workflows & Integrations</h4>
+                                    <p>Seamless connection of third-party services, APIs, and operational tools.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-cloud"></i>
+                                <div>
+                                    <h4>Cloud Infrastructure</h4>
+                                    <p>Scalable, secure, cloud-ready systems built for reliability and performance.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Maintenance & Technical Support</h4>
+                                    <p>Ongoing system maintenance, updates, and responsive technical support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pillar-cta" style="margin-top:2rem;text-align:center;">
+                            <a href="contact.html?service=technology-automation" class="btn btn-primary" onclick="gtag('event', 'service_inquiry', {'event_category': 'services', 'event_label': 'technology'});">
+                                <i class="fas fa-wrench"></i> Build Your Tech Foundation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PILLAR 02: Creative Design -->
+                <div class="service-pillar" id="creative-design">
+                    <div class="pillar-header">
+                        <div class="pillar-number">02</div>
+                        <div class="pillar-title">
+                            <h2>Creative Design & Digital Presence</h2>
+                            <p class="pillar-tagline">We design authority, not just aesthetics.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-content">
+                        <div class="service-list">
+                            <div class="service-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <div>
+                                    <h4>Brand Identity & Visual Design</h4>
+                                    <p>Complete visual identity systems — logo, color palette, typography, brand guidelines.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-desktop"></i>
+                                <div>
+                                    <h4>UI/UX Design</h4>
+                                    <p>User-centred interface and experience design for digital products and platforms.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-bullhorn"></i>
+                                <div>
+                                    <h4>Marketing Systems</h4>
+                                    <p>Visibility campaigns, digital advertising, and integrated marketing infrastructure.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-film"></i>
+                                <div>
+                                    <h4>Digital Content Production</h4>
+                                    <p>Graphics, videos, copywriting, and content assets for all digital channels.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-hashtag"></i>
+                                <div>
+                                    <h4>Social Media Management</h4>
+                                    <p>Strategy, content scheduling, community management, and performance reporting.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <h4>Online Positioning & SEO</h4>
+                                    <p>Search visibility, digital reputation, and online positioning strategy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pillar-cta" style="margin-top:2rem;text-align:center;">
+                            <a href="contact.html?service=creative-design" class="btn btn-primary" onclick="gtag('event', 'service_inquiry', {'event_category': 'services', 'event_label': 'creative'});">
+                                <i class="fas fa-paint-brush"></i> Craft Your Visual Authority
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PILLAR 03: Strategic Growth & Training -->
+                <div class="service-pillar" id="strategic-growth">
+                    <div class="pillar-header">
+                        <div class="pillar-number">03</div>
+                        <div class="pillar-title">
+                            <h2>Strategic Growth & Training</h2>
+                            <p class="pillar-tagline">We don't just plan growth — we equip teams to execute it.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-content">
+                        <div class="service-list" style="margin-bottom:2rem;">
+                            <!-- Strategy side -->
+                            <div class="service-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h4>Business Ideation & Structuring</h4>
+                                    <p>Business model development, structuring, and market entry planning.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-search-dollar"></i>
+                                <div>
+                                    <h4>Market Research & Analysis</h4>
+                                    <p>Competitor intelligence, market sizing, and strategic opportunity mapping.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <div>
+                                    <h4>Business Optimization</h4>
+                                    <p>Process redesign, model optimization, and operational efficiency improvement.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <div>
+                                    <h4>Growth & Scaling Strategy</h4>
+                                    <p>Expansion planning, funding strategy, and sustainable scaling frameworks.</p>
+                                </div>
+                            </div>
+                            <!-- Training side -->
+                            <div class="service-item">
+                                <i class="fas fa-user-check"></i>
+                                <div>
+                                    <h4>Technical Onboarding & Training</h4>
+                                    <p>System-specific training so your team operates platforms confidently and independently.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-users-cog"></i>
+                                <div>
+                                    <h4>Business Process Training</h4>
+                                    <p>Workflow documentation, process training, and team efficiency programs.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-user-tie"></i>
+                                <div>
+                                    <h4>Entrepreneurship Coaching</h4>
+                                    <p>One-on-one and group coaching for founders and startup teams.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Corporate & Digital Skills Training</h4>
+                                    <p>Organizational training, digital literacy, and team capability development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="text-align:center;">
+                            <a href="training.html" class="btn btn-primary" onclick="gtag('event', 'service_inquiry', {'event_category': 'services', 'event_label': 'training'});">
+                                <i class="fas fa-graduation-cap"></i> View Full Training Programs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT STORE LINK BOX -->
+                <div class="product-link-box">
+                    <h3><i class="fas fa-box-open" style="color:var(--teal);margin-right:0.5rem;"></i> Product & Resource Store</h3>
+                    <p>Complete business provisioning — hardware, software, connectivity solutions, and digital tools. Available individually or bundled with our services for a seamless setup.</p>
+                    <a href="products.html" class="btn btn-navy" onclick="gtag('event', 'service_to_products', {'event_category': 'navigation'});">
+                        <i class="fas fa-store"></i> Browse the Product Store
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== DEVELOPMENT FRAMEWORK ===== -->
+        <section class="framework-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Method</span>
+                    <h2>The Neczux Development Framework</h2>
+                    <p>Every engagement follows this five-stage process to ensure measurable, lasting outcomes.</p>
+                </div>
+
+                <div class="framework-process" style="max-width:700px;margin:0 auto;">
+                    <div class="process-step-row">
+                        <div class="step-dot">1</div>
+                        <div class="step-info">
+                            <h4>Identify</h4>
+                            <p>Client need identification, gap analysis, and entry service definition.</p>
+                        </div>
+                    </div>
+                    <div class="process-step-row">
+                        <div class="step-dot">2</div>
+                        <div class="step-info">
+                            <h4>Build</h4>
+                            <p>Systems development, brand creation, and platform implementation.</p>
+                        </div>
+                    </div>
+                    <div class="process-step-row">
+                        <div class="step-dot">3</div>
+                        <div class="step-info">
+                            <h4>Operate</h4>
+                            <p>Operations setup, automation activation, and live system launch.</p>
+                        </div>
+                    </div>
+                    <div class="process-step-row">
+                        <div class="step-dot">4</div>
+                        <div class="step-info">
+                            <h4>Optimize</h4>
+                            <p>Strategy refinement, performance optimization, and consulting iteration.</p>
+                        </div>
+                    </div>
+                    <div class="process-step-row">
+                        <div class="step-dot" style="background:var(--teal);color:var(--dark);">5</div>
+                        <div class="step-info">
+                            <h4>Scale</h4>
+                            <p>Business expansion, team training, product integration, and re-optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Implement Your Complete Business System?</h2>
+                    <p>Let's transform your ideas into structured, scalable operations — starting today.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg" onclick="gtag('event', 'cta_click', {'event_category': 'services_page', 'event_label': 'start_journey'});">
+                            <i class="fas fa-rocket"></i> Start Your Journey
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-white" onclick="gtag('event', 'cta_click', {'event_category': 'services_page', 'event_label': 'schedule'});">
+                            <i class="fas fa-calendar"></i> Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="ngg-images/NGG3.png" alt="Neczux Global Group" width="36" height="36" loading="lazy">
+                        <span>Neczux Global Group</span>
+                    </div>
+                    <p class="footer-description">Integrated business development and technology solutions — from idea to scale.</p>
+                    <div class="footer-contact-info">
+                        <a href="mailto:neczuxglobalgroup@gmail.com"><i class="fas fa-envelope"></i> neczuxglobalgroup@gmail.com</a>
+                        <a href="tel:+233247298881"><i class="fas fa-phone"></i> +233 247 298 881</a>
+                        <a href="tel:+233542343611"><i class="fas fa-phone"></i> +233 542 343 611</a>
+                        <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#tech-automation">IT & Automation</a></li>
+                        <li><a href="#creative-design">Creative Design</a></li>
+                        <li><a href="#strategic-growth">Strategic Growth</a></li>
+                        <li><a href="products.html">Product Store</a></li>
+                        <li><a href="training.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#leadership">Leadership</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/neczuxglobal" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/233247298881" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <p style="color:rgba(245,245,243,0.6);font-size:0.85rem;margin-bottom:0.75rem;">Subscribe for updates</p>
+                        <form class="newsletter-form" id="footerNewsletter">
+                            <input type="email" placeholder="Your email" required aria-label="Email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neczux Global Group Ltd. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

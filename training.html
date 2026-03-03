@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Neczux Training Services — Practical, implementation-focused training for businesses, entrepreneurs, and teams. Technical onboarding, business process, entrepreneurship, and corporate training.">
+    <meta name="keywords" content="business training, technical onboarding, entrepreneurship coaching, corporate training, digital skills, Accra Ghana">
+    <meta name="author" content="Neczux Global Group Ltd.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.neczuxglobal.com/training.html">
+    <meta property="og:title" content="Training Services | Neczux Global Group">
+    <meta property="og:description" content="Practical, implementation-focused training for businesses, entrepreneurs, and teams.">
+    <meta property="og:image" content="https://www.neczuxglobal.com/ngg-images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Training Services | Neczux Global Group">
+    <meta name="twitter:description" content="Practical training for business growth.">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <title>Training Services | Neczux Global Group | Practical Business Training</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="ngg-images/favicon.ico">
+    
+    <style>
+        .training-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.1rem;
+            background: var(--white-pure);
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,15,122,0.06);
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+        .training-item:hover { 
+            border-color: rgba(46,207,190,0.3); 
+            box-shadow: var(--shadow-sm); 
+            transform: translateX(5px);
+        }
+        .training-item i { 
+            color: var(--teal); 
+            font-size: 1.1rem; 
+            margin-top: 0.1rem; 
+            flex-shrink: 0; 
+        }
+        .training-item h4 { 
+            font-size: 0.95rem; 
+            color: var(--navy); 
+            margin-bottom: 0.2rem; 
+        }
+        .training-item p  { 
+            font-size: 0.85rem; 
+        }
+        
+        .program-card .btn-outline-teal {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+        .program-card .btn-outline-teal:hover {
+            background: var(--teal);
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Cookie Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
+                <a href="/privacy-policy" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="ngg-images/NGG.png" alt="Neczux Global Group Logo" width="38" height="38">
+                    <span class="logo-text">Neczux Global Group</span>
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-grid">
+                                    <a href="services.html#tech-automation" class="dropdown-column">
+                                        <h4><i class="fas fa-robot"></i> Technology & Automation</h4>
+                                        <p>Websites, apps, systems & workflow automation</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="services.html#creative-design" class="dropdown-column">
+                                        <h4><i class="fas fa-palette"></i> Creative Design</h4>
+                                        <p>Brand identity, digital content & marketing systems</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="services.html#strategic-growth" class="dropdown-column">
+                                        <h4><i class="fas fa-chart-line"></i> Strategic Growth & Training</h4>
+                                        <p>Business strategy, venture building & team training</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                    <a href="products.html" class="dropdown-column">
+                                        <h4><i class="fas fa-box-open"></i> Product & Resource Store</h4>
+                                        <p>Hardware, software, connectivity & digital tools</p>
+                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="training.html" class="active" aria-current="page">Training</a></li>
+                        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+                    </ul>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== PAGE HERO ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">Training Services</span>
+                <h1>Training That Creates Independence</h1>
+                <p class="hero-subtitle">Implementation Comes First. Training Locks It In.</p>
+                <p class="hero-description">
+                    We don't just set up systems — we transfer the skills to run them. Our training programs
+                    are practical, context-specific, and designed so your team operates with full confidence
+                    and long-term independence.
+                </p>
+                <div class="hero-features" style="justify-content:center;margin-top:2rem;">
+                    <span class="badge"><i class="fas fa-hands-helping"></i> Hands-on Practice</span>
+                    <span class="badge"><i class="fas fa-chart-line"></i> Measurable Outcomes</span>
+                    <span class="badge"><i class="fas fa-certificate"></i> Certification</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROGRAMS ===== -->
+        <section class="training-programs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Programs</span>
+                    <h2>Training Across Every Stage</h2>
+                    <p>Whether you've just launched a system or are ready to upskill an entire organization, we have a program for every context.</p>
+                </div>
+
+                <div class="programs-grid">
+
+                    <!-- Technical Onboarding -->
+                    <div class="program-card" id="technical">
+                        <div class="program-icon"><i class="fas fa-user-check"></i></div>
+                        <h3>Technical Onboarding</h3>
+                        <p class="program-description">System-specific training for implemented solutions.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> Software operation & administration</li>
+                            <li><i class="fas fa-check-circle"></i> System management & maintenance</li>
+                            <li><i class="fas fa-check-circle"></i> Troubleshooting & issue resolution</li>
+                            <li><i class="fas fa-check-circle"></i> Platform-specific workflows</li>
+                        </ul>
+                        <a href="contact.html?service=technology-automation&training=technical" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'technical'});">Enroll Now</a>
+                    </div>
+
+                    <!-- Business Process -->
+                    <div class="program-card" id="business-process">
+                        <div class="program-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Business Process Training</h3>
+                        <p class="program-description">Optimizing workflows and operational efficiency.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> Workflow design & documentation</li>
+                            <li><i class="fas fa-check-circle"></i> Operational efficiency improvement</li>
+                            <li><i class="fas fa-check-circle"></i> Process standardization</li>
+                            <li><i class="fas fa-check-circle"></i> Team collaboration systems</li>
+                        </ul>
+                        <a href="contact.html?service=strategic-growth&training=business-process" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'business-process'});">Enroll Now</a>
+                    </div>
+
+                    <!-- Entrepreneurship -->
+                    <div class="program-card" id="entrepreneurship">
+                        <div class="program-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Entrepreneurship Coaching</h3>
+                        <p class="program-description">Building and scaling successful business ventures.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> Business model development</li>
+                            <li><i class="fas fa-check-circle"></i> Market entry & growth strategy</li>
+                            <li><i class="fas fa-check-circle"></i> Funding & investment fundamentals</li>
+                            <li><i class="fas fa-check-circle"></i> Founder mindset & execution</li>
+                        </ul>
+                        <a href="contact.html?service=strategic-growth&training=entrepreneurship" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'entrepreneurship'});">Enroll Now</a>
+                    </div>
+
+                    <!-- Digital Literacy -->
+                    <div class="program-card" id="digital">
+                        <div class="program-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Digital Literacy & Skills</h3>
+                        <p class="program-description">Essential digital capabilities for modern business.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> Core digital tools & office software</li>
+                            <li><i class="fas fa-check-circle"></i> Online collaboration & productivity</li>
+                            <li><i class="fas fa-check-circle"></i> Digital security awareness</li>
+                            <li><i class="fas fa-check-circle"></i> Internet & social media proficiency</li>
+                        </ul>
+                        <a href="contact.html?service=strategic-growth&training=digital-literacy" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'digital'});">Enroll Now</a>
+                    </div>
+
+                    <!-- Corporate Training -->
+                    <div class="program-card" id="corporate">
+                        <div class="program-icon"><i class="fas fa-building"></i></div>
+                        <h3>Corporate & Team Training</h3>
+                        <p class="program-description">Custom programs for organizations at scale.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> Team capability development</li>
+                            <li><i class="fas fa-check-circle"></i> Leadership & management training</li>
+                            <li><i class="fas fa-check-circle"></i> Change management & transformation</li>
+                            <li><i class="fas fa-check-circle"></i> Bespoke curriculum design</li>
+                        </ul>
+                        <a href="contact.html?service=strategic-growth&training=corporate" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'corporate'});">Inquire</a>
+                    </div>
+
+                    <!-- Specialized Workshops -->
+                    <div class="program-card" id="workshops">
+                        <div class="program-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>Specialized Workshops</h3>
+                        <p class="program-description">Intensive, topic-focused sessions with immediate impact.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check-circle"></i> 1–2 day intensive formats</li>
+                            <li><i class="fas fa-check-circle"></i> Hands-on, applied sessions</li>
+                            <li><i class="fas fa-check-circle"></i> Industry-specific topics</li>
+                            <li><i class="fas fa-check-circle"></i> Expert-led facilitation</li>
+                        </ul>
+                        <a href="contact.html?service=strategic-growth&training=workshops" class="btn btn-outline-teal full-width" onclick="gtag('event', 'training_inquiry', {'event_category': 'training', 'event_label': 'workshops'});">Inquire</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== METHODOLOGY ===== -->
+        <section class="methodology-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">How We Teach</span>
+                    <h2>Our Training Methodology</h2>
+                    <p>Every program is built to produce real-world capability — not just classroom knowledge.</p>
+                </div>
+
+                <div class="methodology-grid">
+                    <div class="methodology-item">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h4>Needs Assessment</h4>
+                        <p>We start by understanding your context, team, and specific training goals before anything is designed.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4>Practical First</h4>
+                        <p>Hands-on exercises and real-world scenarios from session one — theory is the backdrop, not the focus.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <i class="fas fa-tasks"></i>
+                        <h4>Custom Curriculum</h4>
+                        <p>Programs tailored to your industry, tools, and business stage — never one-size-fits-all.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Progress Tracking</h4>
+                        <p>Regular assessments and check-ins to measure learning outcomes and adjust where needed.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>Post-Training Support</h4>
+                        <p>Support resources and check-in sessions after completion to reinforce application.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Completion Certificates</h4>
+                        <p>Certificates of completion for participants across eligible programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DELIVERY FORMATS ===== -->
+        <section class="formats-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Delivery Options</span>
+                    <h2>Choose Your Training Format</h2>
+                    <p>We adapt to your schedule, team size, and logistics — not the other way around.</p>
+                </div>
+
+                <div class="formats-grid">
+                    <div class="format-card">
+                        <i class="fas fa-user-friends"></i>
+                        <h4>In-Person Training</h4>
+                        <ul>
+                            <li>On-site at your location</li>
+                            <li>Face-to-face interaction</li>
+                            <li>Direct hands-on practice</li>
+                            <li>Immediate feedback loop</li>
+                        </ul>
+                    </div>
+                    <div class="format-card">
+                        <i class="fas fa-video"></i>
+                        <h4>Virtual Training</h4>
+                        <ul>
+                            <li>Live interactive online sessions</li>
+                            <li>Virtual classroom tools</li>
+                            <li>Recorded sessions available</li>
+                            <li>Flexible scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="format-card">
+                        <i class="fas fa-th-large"></i>
+                        <h4>Blended Learning</h4>
+                        <ul>
+                            <li>Mix of in-person & online</li>
+                            <li>Self-paced modules</li>
+                            <li>Live Q&A and review sessions</li>
+                            <li>Maximum flexibility</li>
+                        </ul>
+                    </div>
+                    <div class="format-card">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Self-Paced Learning</h4>
+                        <ul>
+                            <li>Online course materials</li>
+                            <li>Learn at your own pace</li>
+                            <li>Access anytime, anywhere</li>
+                            <li>Supplementary resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TRAINING OUTCOMES ===== -->
+        <section class="results-section" style="background:linear-gradient(135deg, var(--navy-deep), var(--navy));">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" style="color:var(--teal);">Proven Results</span>
+                    <h2 style="color:white;">Training That Delivers</h2>
+                </div>
+                <div class="results-grid" style="max-width:1000px;">
+                    <div class="result-item">
+                        <span class="result-number">90%</span>
+                        <span class="result-label">Skill Retention</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">40%</span>
+                        <span class="result-label">Efficiency Gain</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">100%</span>
+                        <span class="result-label">Team Confidence</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">2x</span>
+                        <span class="result-label">Faster Adoption</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Empower Your Team With Practical Skills</h2>
+                    <p>Invest in training that delivers measurable business impact — not just certificates.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html?service=strategic-growth" class="btn btn-primary btn-lg" onclick="gtag('event', 'training_cta', {'event_category': 'training', 'event_label': 'schedule'});">
+                            <i class="fas fa-calendar-alt"></i> Schedule Training
+                        </a>
+                        <a href="services.html" class="btn btn-outline-white" onclick="gtag('event', 'training_cta', {'event_category': 'training', 'event_label': 'view_services'});">
+                            <i class="fas fa-eye"></i> View All Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="ngg-images/NGG3.png" alt="Neczux Global Group" width="36" height="36" loading="lazy">
+                        <span>Neczux Global Group</span>
+                    </div>
+                    <p class="footer-description">Integrated business development and technology solutions — from idea to scale.</p>
+                    <div class="footer-contact-info">
+                        <a href="mailto:neczuxglobalgroup@gmail.com"><i class="fas fa-envelope"></i> neczuxglobalgroup@gmail.com</a>
+                        <a href="tel:+233247298881"><i class="fas fa-phone"></i> +233 247 298 881</a>
+                        <a href="tel:+233542343611"><i class="fas fa-phone"></i> +233 542 343 611</a>
+                        <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Training Programs</h4>
+                    <ul>
+                        <li><a href="#technical">Technical Onboarding</a></li>
+                        <li><a href="#business-process">Business Process</a></li>
+                        <li><a href="#entrepreneurship">Entrepreneurship</a></li>
+                        <li><a href="#digital">Digital Literacy</a></li>
+                        <li><a href="#corporate">Corporate Training</a></li>
+                        <li><a href="#workshops">Workshops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Product Store</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/neczuxglobal" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/233247298881" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <p style="color:rgba(245,245,243,0.6);font-size:0.85rem;margin-bottom:0.75rem;">Subscribe for updates</p>
+                        <form class="newsletter-form" id="footerNewsletter">
+                            <input type="email" placeholder="Your email" required aria-label="Email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Neczux Global Group Ltd. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
