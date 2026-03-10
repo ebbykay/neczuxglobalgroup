@@ -94,6 +94,10 @@ p:last-child { margin-bottom: 0; }
 .section-header h2 { margin-bottom: 1rem; }
 .section-header p  { max-width: 580px; margin: 0 auto; font-size: 1.05rem; }
 
+.home-page .section-header p {
+    text-align: left;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-flex;
@@ -1278,18 +1282,46 @@ textarea { resize: vertical; min-height: 120px; }
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
-.faq-item.active .faq-question i { transform: rotate(180deg); }
+/* Chevron rotates when answer is open */
+.faq-question[aria-expanded="true"] i { transform: rotate(180deg); }
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease;
+    transition: max-height 0.35s ease, padding 0.25s ease;
     padding: 0 1.5rem;
 }
-.faq-item.active .faq-answer {
-    max-height: 300px;
+.faq-answer.open {
+    max-height: 420px;
     padding: 0 1.5rem 1.25rem;
 }
 .faq-answer p { font-size: 0.9rem; }
+
+/* ===== SCROLL TO TOP ===== */
+#scrollToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 46px;
+    height: 46px;
+    background: var(--navy);
+    color: var(--white-pure, #F5F5F3);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,15,122,0.25);
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+}
+#scrollToTop.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#scrollToTop:hover   { background: var(--teal); color: var(--dark, #0D1117); box-shadow: 0 6px 20px rgba(46,207,190,0.4); }
+@media (max-width: 768px) { #scrollToTop { bottom: 1.25rem; right: 1.25rem; width: 40px; height: 40px; } }
 
 /* ===== PRODUCTS ===== */
 .products-categories { padding: var(--section-pad); background: var(--white-pure); }
