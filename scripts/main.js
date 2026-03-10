@@ -350,5 +350,22 @@ document.addEventListener('DOMContentLoaded', function () {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
+    
+    // ===== COOKIE CONSENT =====
+    (function initCookieConsent() {
+        if (localStorage.getItem('ngg-cookies-accepted')) return;
+        var banner = document.getElementById('cookieConsent');
+        if (!banner) return;
+        setTimeout(function() { banner.classList.add('show'); }, 900);
+        var acceptBtn  = document.getElementById('acceptCookies');
+        var declineBtn = document.getElementById('declineCookies');
+        function dismiss(accepted) {
+            localStorage.setItem('ngg-cookies-accepted', accepted ? 'true' : 'false');
+            banner.classList.remove('show');
+        }
+        if (acceptBtn)  acceptBtn.addEventListener('click',  function() { dismiss(true);  });
+        if (declineBtn) declineBtn.addEventListener('click', function() { dismiss(false); });
+    })();
+
     console.log('Neczux Global Group — System Initialized ✓');
-});
+}

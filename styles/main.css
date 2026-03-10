@@ -94,10 +94,6 @@ p:last-child { margin-bottom: 0; }
 .section-header h2 { margin-bottom: 1rem; }
 .section-header p  { max-width: 580px; margin: 0 auto; font-size: 1.05rem; }
 
-.home-page .section-header p {
-    text-align: left;
-}
-
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-flex;
@@ -473,6 +469,19 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-features .feature i { color: var(--teal); font-size: 0.8rem; }
 
+/* ── Homepage hero: content block is left-aligned in 2-col grid ── */
+.hero .hero-content {
+    text-align: left;
+}
+.hero .hero-content .hero-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 540px;
+}
+.hero .hero-content .hero-buttons { justify-content: flex-start; }
+.hero .hero-content .hero-features { justify-content: flex-start; }
+
 /* Hero graphic — animated rings */
 .hero-graphic {
     position: relative;
@@ -545,14 +554,17 @@ p:last-child { margin-bottom: 0; }
     font-weight: 600;
     margin-bottom: 1rem;
     font-family: var(--font-head);
-    text-align: left;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 .page-hero .hero-description {
     font-size: 1.05rem;
     color: rgba(245,245,243,0.8);
     max-width: 680px;
-    margin: 0 auto;
+    margin: 0.25rem auto 0;
     line-height: 1.75;
+    text-align: center;
 }
 
 /* ===== CORE SERVICES (homepage) ===== */
@@ -1282,46 +1294,18 @@ textarea { resize: vertical; min-height: 120px; }
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
-/* Chevron rotates when answer is open */
-.faq-question[aria-expanded="true"] i { transform: rotate(180deg); }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.25s ease;
+    transition: max-height 0.35s ease;
     padding: 0 1.5rem;
 }
-.faq-answer.open {
-    max-height: 420px;
+.faq-item.active .faq-answer {
+    max-height: 300px;
     padding: 0 1.5rem 1.25rem;
 }
 .faq-answer p { font-size: 0.9rem; }
-
-/* ===== SCROLL TO TOP ===== */
-#scrollToTop {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 46px;
-    height: 46px;
-    background: var(--navy);
-    color: var(--white-pure, #F5F5F3);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(0,15,122,0.25);
-    z-index: 900;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(12px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
-}
-#scrollToTop.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-#scrollToTop:hover   { background: var(--teal); color: var(--dark, #0D1117); box-shadow: 0 6px 20px rgba(46,207,190,0.4); }
-@media (max-width: 768px) { #scrollToTop { bottom: 1.25rem; right: 1.25rem; width: 40px; height: 40px; } }
 
 /* ===== PRODUCTS ===== */
 .products-categories { padding: var(--section-pad); background: var(--white-pure); }
@@ -1797,7 +1781,15 @@ textarea { resize: vertical; min-height: 120px; }
 
     .hero .container { grid-template-columns: 1fr; text-align: center; }
     .hero-graphic { display: none; }
-    .hero-subtitle { margin: 0 auto 2rem; }
+    .hero-subtitle { margin: 0 auto 2rem; text-align: center; }
+    /* On mobile the single-col homepage centres everything */
+    .hero .hero-content                   { text-align: center; }
+    .hero .hero-content .hero-subtitle    { text-align: center; margin: 0 auto 2rem; }
+    .hero .hero-content .hero-buttons     { justify-content: center; }
+    .hero .hero-content .hero-features    { justify-content: center; }
+    /* Inner page subtitles always centred */
+    .page-hero .hero-subtitle             { text-align: center; }
+    .page-hero .hero-description          { text-align: center; }
     .hero-buttons { justify-content: center; flex-direction: column; align-items: stretch; }
     .hero-features { justify-content: center; }
 
@@ -2116,3 +2108,88 @@ textarea { resize: vertical; min-height: 120px; }
         font-size: 1rem;
     }
 }
+/* ===== SERVICE NAV PILLS (services.html) ===== */
+.service-nav {
+    background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid rgba(0,15,122,0.08);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.service-nav-inner {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.75rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.service-nav-inner::-webkit-scrollbar { display: none; }
+.nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    text-decoration: none;
+}
+.nav-pill:hover,
+.nav-pill.active {
+    background: var(--navy);
+    color: var(--white-pure);
+    border-color: var(--navy);
+}
+.nav-pill i { font-size: 0.9rem; }
+
+/* ===== PRODUCT LINK BOX (services.html) ===== */
+.product-link-box {
+    background: linear-gradient(135deg, rgba(46,207,190,0.06), rgba(0,15,122,0.04));
+    border: 1px solid rgba(46,207,190,0.2);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+.product-link-box h3 {
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+.product-link-box p {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== TRAINING ITEM (training.html) ===== */
+.training-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.1rem;
+    background: var(--white-pure);
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,15,122,0.06);
+    margin-bottom: 0.75rem;
+    transition: var(--transition);
+}
+.training-item:hover {
+    border-color: rgba(46,207,190,0.3);
+    box-shadow: var(--shadow-sm);
+    transform: translateX(5px);
+}
+.training-item i { color: var(--teal); font-size: 1.1rem; margin-top: 0.1rem; flex-shrink: 0; }
+.training-item h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.2rem; }
+.training-item p  { font-size: 0.85rem; }
