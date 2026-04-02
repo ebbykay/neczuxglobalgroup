@@ -24,11 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileBtn.addEventListener('click', function () {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
-            const headerHeight = header ? header.offsetHeight : 72;
-            if (navMenu.classList.contains('active')) {
-                navMenu.style.top = headerHeight + 'px';
-                navMenu.style.height = 'calc(100vh - ' + headerHeight + 'px)';
-            }
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         });
