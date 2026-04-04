@@ -1765,33 +1765,44 @@ textarea { resize: vertical; min-height: 120px; }
 
     .dropdown {
         width: 100%;
+        position: relative;
     }
     .dropdown-toggle {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        user-select: none;
     }
     .dropdown-toggle i.fa-chevron-down {
         margin-left: auto;
+        flex-shrink: 0;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+    .dropdown.active .dropdown-toggle i.fa-chevron-down {
+        transform: rotate(180deg);
     }
 
     .dropdown-menu {
         position: static;
-        width: calc(100% + 3rem);
+        width: 100%;
         box-shadow: none;
         opacity: 1;
         visibility: visible;
         transform: none;
         background: rgba(0,15,122,0.05);
         border-radius: 0;
-        padding: 0.5rem 1rem;
-        margin: 0 -1rem;
+        padding: 0;
+        margin: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
         border: none;
     }
-    .dropdown-menu.open { max-height: 600px; }
+    .dropdown-menu.open { max-height: 800px; padding: 0.5rem 1rem; }
     .dropdown-grid { grid-template-columns: 1fr; gap: 0.5rem; }
     .dropdown-column { padding: 0.75rem; margin: 0; }
 
