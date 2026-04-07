@@ -19,89 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===== MOBILE MENU TOGGLE =====
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navMenu   = document.querySelector('.nav-menu');
-    let backdrop    = null;
-
-    function createBackdrop() {
-        if (!backdrop) {
-            backdrop = document.createElement('div');
-            backdrop.className = 'nav-backdrop';
-            Object.assign(backdrop.style, {
-                position: 'fixed',
-                top: '72px',
-                left: '0',
-                right: '0',
-                bottom: '0',
-                background: 'rgba(0,0,0,0.4)',
-                zIndex: '998',
-                opacity: '0',
-                transition: 'opacity 0.3s ease',
-                pointerEvents: 'none'
-            });
-            document.body.appendChild(backdrop);
-        }
-        return backdrop;
-    }
-
-    function showBackdrop() {
-        const bd = createBackdrop();
-        bd.style.pointerEvents = 'auto';
-        bd.style.opacity = '1';
-        bd.addEventListener('click', closeMenu, { once: true });
-    }
-
-    function hideBackdrop() {
-        if (backdrop) {
-            backdrop.style.opacity = '0';
-            backdrop.style.pointerEvents = 'none';
-        }
-    }
-
-    function closeMenu() {
-        mobileBtn.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.style.overflow = '';
-        mobileBtn.setAttribute('aria-expanded', 'false');
-        hideBackdrop();
-        document.querySelectorAll('.dropdown.active').forEach(d => {
-            d.classList.remove('active');
-            d.querySelector('.dropdown-menu')?.classList.remove('open');
-        });
-    }
 
     if (mobileBtn && navMenu) {
-        mobileBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
+        mobileBtn.addEventListener('click', function () {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
-
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-                this.setAttribute('aria-expanded', 'true');
-                showBackdrop();
-            } else {
-                closeMenu();
-            }
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         });
 
         // Close menu on nav link click
-        navMenu.querySelectorAll('.nav-list > li > a:not(.dropdown-toggle)').forEach(link => {
+        navMenu.querySelectorAll('.nav-list a:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
-                closeMenu();
+                mobileBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                mobileBtn.setAttribute('aria-expanded', 'false');
             });
-        });
-
-        // Close menu on dropdown menu item click
-        navMenu.querySelectorAll('.dropdown-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                closeMenu();
-            });
-        });
-
-        // Close menu when clicking outside (on desktop, this is for safety)
-        document.addEventListener('click', function (e) {
-            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
-                closeMenu();
-            }
         });
     }
 
@@ -110,20 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         toggle.addEventListener('click', function (e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                e.stopPropagation();
-                const dropdown = this.closest('.dropdown');
-                const menu = dropdown.querySelector('.dropdown-menu');
+                const menu = this.closest('.dropdown').querySelector('.dropdown-menu');
                 if (menu) {
-                    // Close other open dropdowns
-                    document.querySelectorAll('.dropdown.active').forEach(d => {
-                        if (d !== dropdown) {
-                            d.classList.remove('active');
-                            d.querySelector('.dropdown-menu')?.classList.remove('open');
-                        }
-                    });
-
-                    // Toggle this dropdown
-                    dropdown.classList.toggle('active');
                     menu.classList.toggle('open');
                     this.setAttribute('aria-expanded', menu.classList.contains('open'));
                 }
