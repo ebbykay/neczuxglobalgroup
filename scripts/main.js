@@ -445,5 +445,27 @@ document.addEventListener('DOMContentLoaded', function () {
         if (declineBtn) declineBtn.addEventListener('click', function() { dismiss(false); });
     })();
 
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.getElementById('navMenu');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle.parentElement.classList.toggle('active');
+        });
+    });
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
     console.log('Neczux Global Group — System Initialized ✓');
 }

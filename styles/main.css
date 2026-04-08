@@ -2222,3 +2222,87 @@ textarea { resize: vertical; min-height: 120px; }
 .training-item i { color: var(--teal); font-size: 1.1rem; margin-top: 0.1rem; flex-shrink: 0; }
 .training-item h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.2rem; }
 .training-item p  { font-size: 0.85rem; }
+
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white-pure);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+        transform: translateY(-120%);
+        transition: var(--transition);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list li a {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    /* Disable hover dropdown on mobile */
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding: 0.5rem 0;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+/* ===== FAQ ===== */
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* adjust if needed */
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
