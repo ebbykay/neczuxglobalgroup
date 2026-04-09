@@ -32,6 +32,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="ngg-images/favicon.ico">
+    
+    <style>
+        /* Service nav pills - additional styling */
+        .service-nav {
+            background: var(--white-pure);
+            border-bottom: 1px solid rgba(0,15,122,0.08);
+            padding: 0;
+            position: sticky;
+            top: 72px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+        .service-nav-inner {
+            display: flex;
+            gap: 0.25rem;
+            padding: 0.75rem 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .service-nav-inner::-webkit-scrollbar { display: none; }
+        .nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--gray-mid);
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .nav-pill:hover, .nav-pill.active {
+            background: var(--navy);
+            color: var(--white-pure);
+            border-color: var(--navy);
+        }
+        .nav-pill i { font-size: 0.9rem; }
+
+        .product-link-box {
+            background: linear-gradient(135deg, rgba(46,207,190,0.06), rgba(0,15,122,0.04));
+            border: 1px solid rgba(46,207,190,0.2);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+        .product-link-box h3 { 
+            color: var(--navy); 
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+        .product-link-box p  { 
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -57,12 +123,12 @@
                     <img src="ngg-images/NGG.png" alt="Neczux Global Group Logo" width="38" height="38">
                     <span class="logo-text">Neczux Global Group</span>
                 </a>
-                <div class="nav-menu" id="navMenu">
+                <div class="nav-menu">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li class="dropdown">
-                            <a href="services.html" class="dropdown-toggle active" aria-current="page" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
+                            <a href="services.html" class="dropdown-toggle active" aria-current="page">Services <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-grid">
                                     <a href="services.html#tech-automation" class="dropdown-column">
@@ -93,7 +159,7 @@
                         <li><a href="contact.html" class="nav-cta">Get Started</a></li>
                     </ul>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span><span></span><span></span>
                 </button>
             </nav>
@@ -437,8 +503,8 @@
                         Vision Meets Venture.
                     </p>
                     <div class="footer-contact-info">
-                        <a href="mailto:neczuxglobalgroup@gmail.com" aria-label="Email us">
-                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="cda3a8aeb7b8b5aaa1a2afaca1aabfa2b8bd8daaa0aca4a1e3aea2a0">neczuxglobalgroup@gmail.com</span>
+                        <a href="/cdn-cgi/l/email-protection#076962647d727f606b6865666b607568727747606a666e6b2964686a" aria-label="Email us">
+                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="0c62696f7679746b60636e6d606b7e63797c4c6b616d6560226f6361">[email&#160;protected]</span>
                         </a>
                         <a href="tel:+233542343611" aria-label="Call us alternate number">
                             <i class="fas fa-phone" aria-hidden="true"></i> +233 542 343 611
@@ -515,11 +581,9 @@
             </div>
         </div>
     </footer>
-    <!-- Scroll to Top -->
     <button id="scrollToTop" class="scroll-top-btn" aria-label="Back to top" title="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>

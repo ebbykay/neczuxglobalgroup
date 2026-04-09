@@ -32,6 +32,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="ngg-images/favicon.ico">
+    
+    <style>
+        .training-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.1rem;
+            background: var(--white-pure);
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,15,122,0.06);
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+        .training-item:hover { 
+            border-color: rgba(46,207,190,0.3); 
+            box-shadow: var(--shadow-sm); 
+            transform: translateX(5px);
+        }
+        .training-item i { 
+            color: var(--teal); 
+            font-size: 1.1rem; 
+            margin-top: 0.1rem; 
+            flex-shrink: 0; 
+        }
+        .training-item h4 { 
+            font-size: 0.95rem; 
+            color: var(--navy); 
+            margin-bottom: 0.2rem; 
+        }
+        .training-item p  { 
+            font-size: 0.85rem; 
+        }
+        
+        .program-card .btn-outline-teal {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+        .program-card .btn-outline-teal:hover {
+            background: var(--teal);
+            color: var(--dark);
+        }
+    </style>
 </head>
 <body>
 
@@ -57,12 +99,12 @@
                     <img src="ngg-images/NGG.png" alt="Neczux Global Group Logo" width="38" height="38">
                     <span class="logo-text">Neczux Global Group</span>
                 </a>
-                <div class="nav-menu" id="navMenu">
+                <div class="nav-menu">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li class="dropdown">
-                            <a href="services.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
+                            <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-grid">
                                     <a href="services.html#tech-automation" class="dropdown-column">
@@ -93,7 +135,7 @@
                         <li><a href="contact.html" class="nav-cta">Get Started</a></li>
                     </ul>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span><span></span><span></span>
                 </button>
             </nav>
@@ -381,8 +423,8 @@
                         Vision Meets Venture.
                     </p>
                     <div class="footer-contact-info">
-                        <a href="mailto:neczuxglobalgroup@gmail.com" aria-label="Email us">
-                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="7d13181e0708051a11121f1c111a0f12080d3d1a101c1411531e1210">neczuxglobalgroup@gmail.com</span>
+                        <a href="/cdn-cgi/l/email-protection#771912140d020f101b1815161b100518020737101a161e1b5914181a" aria-label="Email us">
+                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="513f34322b2429363d3e33303d36233e242111363c30383d7f323e3c">[email&#160;protected]</span>
                         </a>
                         <a href="tel:+233542343611" aria-label="Call us alternate number">
                             <i class="fas fa-phone" aria-hidden="true"></i> +233 542 343 611
@@ -459,11 +501,7 @@
             </div>
         </div>
     </footer>
-    <!-- Scroll to Top -->
-    <button id="scrollToTop" class="scroll-top-btn" aria-label="Back to top" title="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
+    <button id="scrollToTop" class="scroll-top-btn" aria-label="Back to top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
     <script src="scripts/main.js"></script>
 </body>
 </html>
