@@ -3,37 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags -->
+
     <meta name="description" content="Contact Neczux Global Group — Start your journey. Reach us via email, WhatsApp, or phone. Accra, Ghana. Vision Meets Venture.">
     <meta name="keywords" content="contact Neczux, business consultation, Accra Ghana, WhatsApp business, email contact">
     <meta name="author" content="Neczux Global Group Ltd.">
-    
-    <!-- Open Graph -->
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.neczuxglobal.com/contact.html">
     <meta property="og:title" content="Contact Us | Neczux Global Group">
     <meta property="og:description" content="Start your journey with Neczux. Reach us via email, WhatsApp, or phone for a free consultation.">
     <meta property="og:image" content="https://www.neczuxglobal.com/ngg-images/og-image.jpg">
-    
-    <!-- Twitter -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us | Neczux Global Group">
     <meta name="twitter:description" content="Start your journey with Neczux. Reach us via email, WhatsApp, or phone for a free consultation.">
-    
-    <!-- Preconnect -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <title>Contact Us | Neczux Global Group | Start Your Venture</title>
-    
+
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="ngg-images/favicon.ico">
-    
-    <!-- Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -64,444 +59,445 @@
     </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Cookie Banner -->
-    <div id="cookieConsent" class="cookie-banner">
-        <div class="cookie-content">
-            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-            <div class="cookie-buttons">
-                <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
-                <a href="/privacy-policy" class="btn btn-sm btn-outline">Learn More</a>
-            </div>
+    <!-- Cookie banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        <div class="cookie-actions">
+            <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+            <a href="privacy.html">Learn More</a>
         </div>
     </div>
 
-    <!-- ===== HEADER ===== -->
-    <header class="main-header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="ngg-images/NGG.png" alt="Neczux Global Group Logo" width="38" height="38">
-                    <span class="logo-text">Neczux Global Group Ltd.</span>
-                </a>
-                <div class="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="dropdown">
-                            <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-grid">
-                                    <a href="services.html#tech-automation" class="dropdown-column">
-                                        <h4><i class="fas fa-robot"></i> Technology & Automation</h4>
-                                        
-                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
-                                    </a>
-                                    <a href="services.html#creative-design" class="dropdown-column">
-                                        <h4><i class="fas fa-palette"></i> Creative Design</h4>
-                                        
-                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
-                                    </a>
-                                    <a href="services.html#strategic-growth" class="dropdown-column">
-                                        <h4><i class="fas fa-chart-line"></i> Strategic Growth & Training</h4>
-                                        
-                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
-                                    </a>
-                                    <a href="products.html" class="dropdown-column">
-                                        <h4><i class="fas fa-box-open"></i> Product & Resource Store</h4>
-                                        
-                                        <span class="dd-link">Explore <i class="fas fa-arrow-right"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="contact.html" class="nav-cta active" aria-current="page">Get Started</a></li>
-                    </ul>
-                </div>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
+    <!-- Header / Nav -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand">
+                <img src="ngg-images/logo.png" alt="Neczux Global Group" />
+                <span>Neczux Global Group Ltd.</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="services-tech.html">Technology &amp; Automation</a></li>
+                            <li><a href="services-creative.html">Creative Design</a></li>
+                            <li><a href="services-growth.html">Strategic Growth &amp; Training</a></li>
+                            <li><a href="services-store.html">Product &amp; Resource Store</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="contact.html" class="cta">Get Started</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main id="main-content">
+    <main id="main">
 
-        <!-- ===== PAGE HERO ===== -->
-        <section class="page-hero">
+        <!-- Hero -->
+        <section class="contact-hero">
             <div class="container">
-                <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">Let's Talk</span>
+                <span class="eyebrow">Let's Talk</span>
                 <h1>Start Your Journey With Us</h1>
-                <p class="hero-subtitle">Let's Build Something That Works</p>
-                <p class="hero-description">
-                    Ready to move from idea to scalable operation? Reach out through any channel
-                    below — we respond to all inquiries within 24 hours.
-                </p>
-                <div class="hero-stats" style="display:flex;justify-content:center;gap:2rem;margin-top:2rem;">
-                    <div><span style="color:var(--teal);font-weight:700;">24h</span> Response Time</div>
-                    <div><span style="color:var(--teal);font-weight:700;">100%</span> Client Satisfaction</div>
-                    <div><span style="color:var(--teal);font-weight:700;">Free</span> Initial Consultation</div>
-                </div>
+                <p class="lede">Let's Build Something That Works</p>
+                <p>Ready to move from idea to scalable operation? Reach out through any channel below — we respond to all inquiries within 24 hours.</p>
+                <ul class="hero-badges">
+                    <li><i class="fas fa-clock"></i> 24h Response Time</li>
+                    <li><i class="fas fa-star"></i> 100% Client Satisfaction</li>
+                    <li><i class="fas fa-handshake"></i> Free Initial Consultation</li>
+                </ul>
             </div>
         </section>
 
-        <!-- ===== CONTACT SECTION ===== -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
+        <!-- Contact + Form -->
+        <section class="contact-grid">
+            <div class="container two-col">
 
-                    <!-- ===== CONTACT INFO ===== -->
-                    <div class="contact-info">
-                        <h2>Get In Touch</h2>
-                        <p class="contact-description">
-                            We're here to help you navigate your business journey.
-                            Reach out through any of these channels and we'll get back to you promptly.
+                <!-- Left: contact info -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to help you navigate your business journey. Reach out through any of these channels and we'll get back to you promptly.</p>
+
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <a href="mailto:info@neczuxglobal.com">info@neczuxglobal.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <a href="tel:+233542343611">+233 542 343 611</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Accra, Ghana</p>
+                                <p>By appointment only</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Business Hours</h3>
+                                <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                                <p>Saturday: 10:00 AM – 2:00 PM</p>
+                                <p>GMT Timezone</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="quick-actions">
+                        <a class="btn btn-whatsapp" href="https://wa.me/233247298881" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> +233 247 298 881
+                        </a>
+                        <a class="btn btn-primary" href="tel:+233542343611">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+
+                    <div class="social-block">
+                        <h3>Connect on Social</h3>
+                        <ul class="socials">
+                            <li><a href="https://facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+                            <li><a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form-card">
+                    <h2>Send Us a Message</h2>
+                    <p class="muted">We'll respond within 24 hours</p>
+
+                    <!--
+                      NOS integration: this form posts directly to the Neczux Operating System.
+                      Submissions land in the NOS dashboard (Leads + Subscribers).
+                      No Formspree. Do not change field names below — the NOS endpoint depends on them.
+                    -->
+                    <form id="contactForm" novalidate>
+                        <div class="field">
+                            <label for="name">Full Name *</label>
+                            <input id="name" name="name" type="text" required maxlength="100" autocomplete="name">
+                        </div>
+
+                        <div class="row-2">
+                            <div class="field">
+                                <label for="email">Email Address *</label>
+                                <input id="email" name="email" type="email" required maxlength="255" autocomplete="email" placeholder="you@email.com">
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" name="phone" type="tel" maxlength="50" autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="company">Company / Organisation</label>
+                            <input id="company" name="company" type="text" maxlength="200" autocomplete="organization">
+                        </div>
+
+                        <div class="field">
+                            <label for="service">Interested Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="technology-automation">Technology &amp; Automation</option>
+                                <option value="creative-design">Creative Design &amp; Digital Presence</option>
+                                <option value="strategic-growth">Strategic Growth &amp; Training</option>
+                                <option value="product-store">Product &amp; Resource Store</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="not-sure">Not Sure Yet / Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-1k">Under $1,000</option>
+                                <option value="1k-5k">$1,000 – $5,000</option>
+                                <option value="5k-10k">$5,000 – $10,000</option>
+                                <option value="10k-25k">$10,000 – $25,000</option>
+                                <option value="25k-plus">$25,000+</option>
+                                <option value="discuss">Prefer to discuss</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required maxlength="4000"></textarea>
+                        </div>
+
+                        <label class="check">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Subscribe to our newsletter for updates and business insights
+                        </label>
+
+                        <label class="check">
+                            <input type="checkbox" name="consultation" value="yes">
+                            I'd like to schedule a free 30-minute consultation
+                        </label>
+
+                        <!-- Honeypot (hidden from humans, bots fill it) -->
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+
+                        <button type="submit" class="btn btn-primary btn-lg" id="contactSubmit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Your information is secure. We never share your data.
                         </p>
 
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
-                                <div>
-                                    <h4>Email Us</h4>
-                                    <a href="mailto:info@neczuxglobal.com" aria-label="Email us"><span class="__cf_email__" data-cfemail="711f14120b0409161d1e13101d16031e040131161c10181d5f121e1c">info@neczuxglobal.com</span></a>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
-                                <div>
-                                    <h4>Call Us</h4>
-                                    <a href="tel:+233542343611">+233 542 343 611</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <div>
-                                    <h4>Location</h4>
-                                    <p>Accra, Ghana</p>
-                                    <p class="small-note">By appointment only</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="contact-method-icon"><i class="fas fa-clock"></i></div>
-                                <div>
-                                    <h4>Business Hours</h4>
-                                    <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
-                                    <p>Saturday: 10:00 AM – 2:00 PM</p>
-                                    <p class="small-note">GMT Timezone</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- WhatsApp + Call CTAs -->
-                        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:2rem 0;">
-                            <a href="https://wa.me/233247298881?text=Hello%20Neczux%2C%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener" class="whatsapp-btn" onclick="gtag('event', 'whatsapp_click', {'event_category': 'contact'});">
-                                <i class="fab fa-whatsapp"></i> +233 247 298 881
-                            </a>
-                            <a href="tel:+233503737821" class="btn btn-outline btn-sm" style="display:inline-flex;align-items:center;gap:0.4rem;" onclick="gtag('event', 'phone_click', {'event_category': 'contact'});">
-                                <i class="fas fa-phone"></i> Call Now
-                            </a>
-                        </div>
-
-                        <!-- Social -->
-                        <div class="social-contact-row">
-                            <h4>Connect on Social</h4>
-                            <div class="social-icons-row">
-                                <a href="https://www.linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="https://x.com/neczuxglobal" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i>
-                                <a href="https://www.facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                                <a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CONTACT FORM ===== -->
-                    <div class="contact-form-container">
-                        <h2>Send Us a Message</h2>
-                        <p class="form-subtitle" style="margin-bottom:1.5rem;">We'll respond within 24 hours</p>
-
-                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mykprola" method="POST">
-                            <div class="form-group">
-                                <label for="name">Full Name <span style="color:var(--teal);">*</span></label>
-                                <input type="text" id="name" name="name" required placeholder="Your full name" minlength="2">
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address <span style="color:var(--teal);">*</span></label>
-                                    <input type="email" id="email" name="email" required placeholder="your@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+233 XX XXX XXXX">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="company">Company / Organisation</label>
-                                <input type="text" id="company" name="company" placeholder="Your company name (if applicable)">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="service">Interested Service <span style="color:var(--teal);">*</span></label>
-                                <select id="service" name="service" required>
-                                    <option value="" disabled selected>Select a service</option>
-                                    <option value="technology-automation">Technology & Automation</option>
-                                    <option value="creative-design">Creative Design & Digital Presence</option>
-                                    <option value="strategic-growth">Strategic Growth & Training</option>
-                                    <option value="product-store">Product & Resource Store</option>
-                                    <option value="multiple">Multiple Services</option>
-                                    <option value="not-sure">Not Sure Yet / Consultation</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="budget">Project Budget</label>
-                                <select id="budget" name="budget">
-                                    <option value="" disabled selected>Select budget range</option>
-                                    <option value="under-1k">Under $1,000</option>
-                                    <option value="1k-5k">$1,000 – $5,000</option>
-                                    <option value="5k-10k">$5,000 – $10,000</option>
-                                    <option value="10k-25k">$10,000 – $25,000</option>
-                                    <option value="25k-plus">$25,000+</option>
-                                    <option value="discuss">Prefer to discuss</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Your Message <span style="color:var(--teal);">*</span></label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, goals, or inquiry…" minlength="10"></textarea>
-                            </div>
-
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
-                                <label for="newsletter">Subscribe to our newsletter for updates and business insights</label>
-                            </div>
-
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="consultation" name="consultation" value="yes">
-                                <label for="consultation">I'd like to schedule a free 30-minute consultation</label>
-                            </div>
-
-                            <!-- Formspree honeypot spam prevention -->
-                            <input type="text" name="_gotcha" style="display:none">
-                            <input type="hidden" name="_subject" value="New Inquiry — Neczux Global Group">
-                            <input type="hidden" name="_replyto" id="replyto" value="">
-
-                            <button type="submit" class="btn btn-primary full-width" style="margin-top:0.5rem;" id="submitBtn">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-
-                            <p class="form-note">
-                                <i class="fas fa-shield-alt"></i> Your information is secure. We never share your data.
-                            </p>
-                        </form>
-                    </div>
+                        <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <!-- ===== FAQ SECTION ===== -->
-        <section class="faq-section">
+        <!-- FAQ -->
+        <section class="faq">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Common Questions</span>
+                <div class="section-head">
+                    <span class="eyebrow">Common Questions</span>
                     <h2>Frequently Asked Questions</h2>
                 </div>
 
                 <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>What makes Neczux different from other service providers?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We're not a fragmented service provider — we're an integrated home provider. All our services work as one system, eliminating the need to manage multiple vendors and ensuring seamless integration across your business operations. Strategy, technology, design, and training all speak the same language here.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>How long does a typical project take?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Project timelines vary based on scope and complexity. Our integrated approach and proven frameworks typically deliver results 2× faster than traditional methods. A standard website project takes 2–4 weeks, while comprehensive business solutions may take 4–8 weeks. We'll give you a precise timeline during consultation.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Can I start with one service and add more later?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Absolutely. Many clients begin with one pillar — such as a website or brand identity — and gradually integrate other services as they grow. Our architecture is designed to be modular yet interconnected, so every addition builds on what's already in place.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>Do you work with early-stage startups or only established businesses?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We work with both. Our services are designed to support businesses at any stage — from founders with an idea to operational companies looking to scale. The right entry point depends on where you are, and we'll help you figure that out in our first conversation.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>How does billing and payment work?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Every engagement is tailored to the scope of work. We provide a clear quote before any work begins, and payment structures are discussed and agreed upon upfront. We accept bank transfers, mobile money, and selected online payment methods.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>What is your response time for inquiries?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We respond to all inquiries within 24 hours (usually much sooner during business hours). For urgent matters, WhatsApp or phone calls are the fastest way to reach us.</p>
-                        </div>
-                    </div>
+                    <details>
+                        <summary>What makes Neczux different from other service providers?</summary>
+                        <p>We're not a fragmented service provider — we're an integrated home provider. All our services work as one system, eliminating the need to manage multiple vendors and ensuring seamless integration across your business operations. Strategy, technology, design, and training all speak the same language here.</p>
+                    </details>
+                    <details>
+                        <summary>How long does a typical project take?</summary>
+                        <p>Project timelines vary based on scope and complexity. Our integrated approach and proven frameworks typically deliver results 2× faster than traditional methods. A standard website project takes 2–4 weeks, while comprehensive business solutions may take 4–8 weeks. We'll give you a precise timeline during consultation.</p>
+                    </details>
+                    <details>
+                        <summary>Can I start with one service and add more later?</summary>
+                        <p>Absolutely. Many clients begin with one pillar — such as a website or brand identity — and gradually integrate other services as they grow. Our architecture is designed to be modular yet interconnected, so every addition builds on what's already in place.</p>
+                    </details>
+                    <details>
+                        <summary>Do you work with early-stage startups or only established businesses?</summary>
+                        <p>We work with both. Our services are designed to support businesses at any stage — from founders with an idea to operational companies looking to scale. The right entry point depends on where you are, and we'll help you figure that out in our first conversation.</p>
+                    </details>
+                    <details>
+                        <summary>How does billing and payment work?</summary>
+                        <p>Every engagement is tailored to the scope of work. We provide a clear quote before any work begins, and payment structures are discussed and agreed upon upfront. We accept bank transfers, mobile money, and selected online payment methods.</p>
+                    </details>
+                    <details>
+                        <summary>What is your response time for inquiries?</summary>
+                        <p>We respond to all inquiries within 24 hours (usually much sooner during business hours). For urgent matters, WhatsApp or phone calls are the fastest way to reach us.</p>
+                    </details>
                 </div>
             </div>
         </section>
 
-        <!-- ===== MAP SECTION (Optional) ===== -->
-        <section class="map-section" style="padding:0;">
-            <div style="height:300px;background:linear-gradient(135deg, var(--navy-deep), var(--navy));display:flex;align-items:center;justify-content:center;">
-                <div style="text-align:center;color:white;">
-                    <i class="fas fa-map-marker-alt" style="font-size:2rem;color:var(--teal);margin-bottom:1rem;"></i>
-                    <p>Accra, Ghana | Virtual consultations available worldwide</p>
-                    <a href="https://wa.me/233247298881" class="btn btn-primary btn-sm" style="margin-top:1rem;">Contact Us for Directions</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CTA SECTION ===== -->
-        <section class="cta-section">
+        <!-- Location -->
+        <section class="location">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Begin Your Transformation?</h2>
-                    <p>Schedule a free consultation — no obligation, just a conversation about your goals.</p>
-                    <div class="cta-buttons">
-                        <a href="https://wa.me/233247298881?text=Hello%20Neczux%2C%20I'd%20like%20to%20schedule%20a%20consultation" target="_blank" rel="noopener" class="btn btn-primary btn-lg" onclick="gtag('event', 'whatsapp_consultation', {'event_category': 'contact'});">
-                            <i class="fab fa-whatsapp"></i> WhatsApp Us
-                        </a>
-                        <a href="/cdn-cgi/l/email-protection#177972746d626f707b7875767b706578626757707a767e7b3974787a" class="btn btn-outline-white">Email Us Directly</a>
-                    </div>
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Accra, Ghana | Virtual consultations available worldwide</p>
+                <a href="mailto:info@neczuxglobal.com" class="btn btn-outline">Contact Us for Directions</a>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to Begin Your Transformation?</h2>
+                <p>Schedule a free consultation — no obligation, just a conversation about your goals.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-whatsapp" href="https://wa.me/233247298881" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                    <a class="btn btn-outline" href="mailto:info@neczuxglobal.com">Email Us Directly</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="main-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="ngg-images/NGG3.png" alt="Neczux Global Group Footer Logo" width="36" height="36" loading="lazy">
-                        <span>Neczux Global Group</span>
-                    </div>
-                    <p class="footer-description">
-                        Integrated business development and technology solutions — from idea to scale.
-                        Vision Meets Venture.
-                    </p>
-                    <div class="footer-contact-info">
-                        <a href="mailto:info@neczuxglobal.com" aria-label="Email us">
-                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="711f14120b0409161d1e13101d16031e040131161c10181d5f121e1c">info@neczuxglobal.com</span>
-                        </a>
-                        <a href="tel:+233542343611" aria-label="Call us alternate number">
-                            <i class="fas fa-phone" aria-hidden="true"></i> +233 542 343 611
-                        </a>
-                        <a href="https://wa.me/233247298881" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i> +233 247 298 881
-                        </a>
-                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Accra, Ghana</p>
-                    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <img src="ngg-images/logo.png" alt="Neczux Global Group">
+                    <span>Neczux Global Group</span>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#tech-automation">IT & Automation</a></li>
-                        <li><a href="services.html#creative-design">Creative Design</a></li>
-                        <li><a href="services.html#strategic-growth">Strategic Growth</a></li>
-                        <li><a href="products.html">Product Store</a></li>
-                        <li><a href="training.html">Training Services</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html#leadership">Leadership</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="footer-socials">
-                        <a href="https://www.linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="Follow us on LinkedIn">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://x.com/neczuxglobal" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
-                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
-                            <i class="fab fa-tiktok" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="Subscribe to our YouTube channel">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="newsletter">
-                        <p style="color:rgba(245,245,243,0.6);font-size:0.85rem;margin-bottom:0.75rem;">Subscribe for updates</p>
-                        <form class="newsletter-form" id="footerNewsletter" aria-label="Newsletter signup">
-                            <input type="email" placeholder="Your email" required aria-label="Email address">
-                            <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                </div>
+                <p>Integrated business development and technology solutions — from idea to scale. Vision Meets Venture.</p>
+                <ul class="footer-contacts">
+                    <li><a href="mailto:info@neczuxglobal.com"><i class="fas fa-envelope"></i> info@neczuxglobal.com</a></li>
+                    <li><a href="tel:+233542343611"><i class="fas fa-phone"></i> +233 542 343 611</a></li>
+                    <li><a href="https://wa.me/233247298881"><i class="fab fa-whatsapp"></i> +233 247 298 881</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Accra, Ghana</li>
+                </ul>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Neczux Global Group Ltd. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                    <a hre
-    <button id="scrollToTop" class="scroll-top-btn" aria-label="Back to top" title="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-    <script src="scripts/main.js"></script>
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services-tech.html">IT &amp; Automation</a></li>
+                    <li><a href="services-creative.html">Creative Design</a></li>
+                    <li><a href="services-growth.html">Strategic Growth</a></li>
+                    <li><a href="services-store.html">Product Store</a></li>
+                    <li><a href="training.html">Training Services</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Connect</h3>
+                <ul class="socials">
+                    <li><a href="https://facebook.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://instagram.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com/company/neczuxglobal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://twitter.com/neczuxglobal" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/@neczuxglobal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+
+                <h4 style="margin-top:1.25rem">Subscribe for updates</h4>
+                <!-- Newsletter-only form (also posts to NOS) -->
+                <form id="newsletterForm" class="newsletter">
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Your email" required maxlength="255">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p id="newsletterStatus" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2025 Neczux Global Group Ltd. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- NOS (Neczux Operating System) integration                    -->
+    <!-- Posts contact + newsletter submissions to the NOS backend.   -->
+    <!-- These keys are publishable (safe in client-side code).       -->
+    <!-- ============================================================ -->
+    <script>
+    (function () {
+      const NOS_URL  = "https://gfbsjhtiuipcsslvhnwm.supabase.co/functions/v1/public-intake";
+      const NOS_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmYnNqaHRpdWlwY3NzbHZobndtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MDMyMDAsImV4cCI6MjA5MTE3OTIwMH0.DfccNHgKjpaScch5hQPXM_d4SuisCU5bXQvmMZJgJP0";
+
+      async function postToNOS(payload) {
+        const res = await fetch(NOS_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": NOS_KEY,
+            "Authorization": "Bearer " + NOS_KEY
+          },
+          body: JSON.stringify(payload)
+        });
+        let data = {};
+        try { data = await res.json(); } catch (_) {}
+        if (!res.ok || data.error) throw new Error(data.error || ("HTTP " + res.status));
+        return data;
+      }
+
+      // ---- Contact form ----
+      const form   = document.getElementById("contactForm");
+      const status = document.getElementById("contactStatus");
+      const btn    = document.getElementById("contactSubmit");
+
+      if (form) {
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          status.textContent = "";
+          status.className = "form-status";
+
+          const fd = new FormData(form);
+          const payload = {
+            type: "contact",
+            name:         fd.get("name"),
+            email:        fd.get("email"),
+            phone:        fd.get("phone"),
+            company:      fd.get("company"),
+            service:      fd.get("service"),
+            budget:       fd.get("budget"),
+            message:      fd.get("message"),
+            newsletter:   fd.get("newsletter") ? "yes" : "",
+            consultation: fd.get("consultation") ? "yes" : "",
+            _gotcha:      fd.get("_gotcha")
+          };
+
+          const original = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+          try {
+            await postToNOS(payload);
+            form.reset();
+            status.textContent = "✓ Thanks! We received your message and will reply within 24 hours.";
+            status.classList.add("success");
+          } catch (err) {
+            console.error(err);
+            status.textContent = "Sorry — something went wrong. Please email info@neczuxglobal.com or WhatsApp us.";
+            status.classList.add("error");
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = original;
+          }
+        });
+      }
+
+      // ---- Footer newsletter ----
+      const nlForm   = document.getElementById("newsletterForm");
+      const nlStatus = document.getElementById("newsletterStatus");
+
+      if (nlForm) {
+        nlForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          nlStatus.textContent = "";
+          nlStatus.className = "form-status";
+          const email = document.getElementById("newsletterEmail").value.trim();
+          if (!email) return;
+
+          try {
+            await postToNOS({ type: "subscribe", email: email, source: "footer" });
+            nlForm.reset();
+            nlStatus.textContent = "✓ Subscribed. Thank you!";
+            nlStatus.classList.add("success");
+          } catch (err) {
+            console.error(err);
+            nlStatus.textContent = "Could not subscribe. Please try again.";
+            nlStatus.classList.add("error");
+          }
+        });
+      }
+    })();
+    </script>
 </body>
 </html>
