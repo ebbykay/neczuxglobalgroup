@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 if (!res.ok) throw new Error('Form submission ' + res.status);
 
-                showToast("Message sent! We'll respond within 24 hours.", 'success');
+                showToast("Message sent! We will review your enquiry.", 'success');
                 contactForm.reset();
                 if (window.gtag) gtag('event', 'form_submit', { event_category: 'lead_capture' });
 
