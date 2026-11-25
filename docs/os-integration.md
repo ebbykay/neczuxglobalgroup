@@ -1,0 +1,2 @@
+# Public OS entry point
+The public operating-system.html page is a browser-only synthetic demonstration, not the private OS. No data collection, credentials, network calls or persistence. Private backend remains in ebbykay/neczux-os. Production hosting requires a persistent database, authenticated HTTPS service, security/privacy gates and owner approval. Do not connect the static page to private data. Replace the demo-only entry with a verified staff login link once hosting is ready.
