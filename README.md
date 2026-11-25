@@ -14,3 +14,6 @@ Use feature branches and pull requests. Do not deploy unreviewed changes to main
 Never place API credentials in browser code. Verify form routing with the business owner before launch. Do not publish unsupported claims or customer information.
 
 See [development plan](docs/development-plan.md) for scope, risks and acceptance gates.
+
+## Engineering documentation
+See the [engineering documentation index](docs/engineering/README.md) and [enterprise roadmap](docs/enterprise-roadmap.md). The internal OS is not yet implemented.
