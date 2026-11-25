@@ -185,14 +185,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // =========================================================
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        const status = document.getElementById('inquiryStatus');
+        const requestType = document.getElementById('requestType');
+        if (requestType) {
+            if (params.get('category') || ['product-store','bundle'].includes(params.get('service'))) requestType.value = 'procurement';
+            else if (params.get('training') || params.get('service') === 'academy') requestType.value = 'training';
+            else if (params.get('service') === 'not-sure') requestType.value = 'consultation';
+        }
         contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const btn = this.querySelector('button[type="submit"]');
             const orig = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
             btn.disabled = true;
+            if (status) status.textContent = 'Sending your enquiry…';
 
             try {
+                const reply = document.getElementById('replyto');
+                if (reply) reply.value = document.getElementById('email').value;
                 const res = await fetch(this.action, {
                     method: 'POST',
                     body: new FormData(this),
@@ -201,11 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!res.ok) throw new Error('Form submission ' + res.status);
 
                 showToast("Message sent! We will review your enquiry.", 'success');
+                if (status) status.textContent = "Your enquiry was submitted. We will review your requirements before confirming availability and pricing.";
                 contactForm.reset();
                 if (window.gtag) gtag('event', 'form_submit', { event_category: 'lead_capture' });
 
             } catch (err) {
                 showToast('Something went wrong. WhatsApp us at +233 247 298 881.', 'error');
+                if (status) status.textContent = 'Submission failed. Your details remain in the form. Please retry or contact us on WhatsApp.';
                 console.error(err);
             } finally {
                 btn.innerHTML = orig;
