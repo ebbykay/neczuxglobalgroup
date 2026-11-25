@@ -1,0 +1,4 @@
+# Quotation engine v0.1
+Requirement CQ-01: calculate multi-line cost and target margin using decimal pricing. CQ-02: require scope, exclusions, acceptance criteria and validity dates. CQ-03: immutable draft and separate customer projection excluding internal rates, costs and profit. CQ-04: reject invalid input.
+Verification: tests/test_quotation.py; run python3 -m unittest discover -s tests -p 'test_*.py' -v.
+Workflow: discovery -> scope -> draft -> owner review -> approved quotation in private OS -> customer acceptance evidence -> engagement. This module only generates drafts. No actual customer records, persistence, approval, sending, PDF, tax calculation, payment schedule, unique reference enforcement or OS integration. Never treat a draft as a binding offer. Validate tax and terms before issue. Private OS remains authoritative for issued quotations and acceptance.
