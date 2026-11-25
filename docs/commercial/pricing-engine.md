@@ -1,0 +1,5 @@
+# Pricing engine v0.1
+Run from repository root: python3 -m unittest discover -s tests -p test_pricing.py -v
+Pure Python standard-library functions in commercial/pricing.py. Decimal strings only; nonnegative bounded inputs, at most four decimal places. Cost and price rounded upward to pesewa; realized margin rounded half-up to two decimal percentage points. Zero revenue margin undefined; nonpositive contribution cannot yield a finite break-even volume.
+Example: estimate("10","40","100",contingency="50") returns cost 550.00, minimum price 785.72, estimated profit 235.72.
+Inputs are illustrative and exclude tax. No approved rates, no demand model, no automatic quotes, no persistence or OS integration. Break-even assumes constant unit contribution and fixed costs; do not double count overhead. Public code contains no confidential assumptions.
