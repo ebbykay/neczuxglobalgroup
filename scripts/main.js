@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ===== URL PARAM PREFILL =====
     const params = new URLSearchParams(window.location.search);
-    ['service', 'budget', 'category', 'training'].forEach(key => {
+    ['service', 'budget', 'category', 'training', 'package'].forEach(key => {
         const el = document.getElementById(key);
         if (el && params.get(key)) el.value = params.get(key);
     });
