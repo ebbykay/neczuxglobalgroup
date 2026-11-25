@@ -17,7 +17,12 @@ class OpportunityTests(unittest.TestCase):
         self.assertEqual(assess(e)["status"],"qualify")
     def test_blocked(self): self.assertEqual(assess(self.full(),lawful=False)["status"],"blocked")
     def test_infeasible(self): self.assertEqual(assess(self.full(),feasible=False)["status"],"blocked")
-    def test_defer(self): self.assertEqual(assess(self.full(1))["status"],"defer")
+    def test_defer(self):
+        e=self.full(1)
+        e["budget"]=e["authority"]=Evidence(2,"Minimum qualification")
+        self.assertEqual(assess(e)["status"],"defer")
+    def test_low_score_gate_precedence(self):
+        self.assertEqual(assess(self.full(1))["status"],"qualify")
     def test_invalid(self):
         for v in (Evidence(True,"x"),Evidence(6,"x"),Evidence(3," ")):
             with self.assertRaises(ValueError): assess({"pain":v})
