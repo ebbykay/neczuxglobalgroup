@@ -1,7 +1,7 @@
 /* ===================================================
    NECZUX GLOBAL GROUP — MAIN JAVASCRIPT
    Single DOMContentLoaded · Clean mobile menu
-   FAQ: .faq-item.active · Formspree ↔ Airtable
+   FAQ: .faq-item.active · Formspree
    =================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -181,67 +181,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // =========================================================
-    // CONTACT FORM — DUAL MODE
-    //
-    // AIRTABLE_MODE = false  → Formspree (ready now, no config)
-    // AIRTABLE_MODE = true   → push to Neczux Operating System
-    //                          Leads table → full automation chain
-    //
-    // To switch to Airtable:
-    //   1. Set AIRTABLE_MODE = true
-    //   2. airtable.com/create/tokens → create PAT with
-    //      scope: data.records:write
-    //   3. Paste token in AIRTABLE_TOKEN
+    // CONTACT FORM — Formspree. Keep future CRM credentials server-side.
     // =========================================================
-    const AIRTABLE_MODE    = false;
-    const AIRTABLE_BASE_ID = 'app8b0QJBSkgZfyve';  // Neczux Operating System
-    const AIRTABLE_TOKEN   = 'YOUR_PAT_HERE';
-
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        const status = document.getElementById('inquiryStatus');
+        const requestType = document.getElementById('requestType');
+        if (requestType) {
+            if (params.get('category') || ['product-store','bundle'].includes(params.get('service'))) requestType.value = 'procurement';
+            else if (params.get('training') || params.get('service') === 'academy') requestType.value = 'training';
+            else if (params.get('service') === 'not-sure') requestType.value = 'consultation';
+        }
         contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const btn = this.querySelector('button[type="submit"]');
             const orig = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
             btn.disabled = true;
+            if (status) status.textContent = 'Sending your enquiry…';
 
             try {
-                if (AIRTABLE_MODE) {
-                    const payload = {
-                        fields: {
-                            'Full Name':        document.getElementById('name')?.value     || '',
-                            'Email':            document.getElementById('email')?.value    || '',
-                            'Phone':            document.getElementById('phone')?.value    || '',
-                            'Company':          document.getElementById('company')?.value  || '',
-                            'Service Interest': [document.getElementById('service')?.value || ''],
-                            'Budget Range':     document.getElementById('budget')?.value   || '',
-                            'Message':          document.getElementById('message')?.value  || '',
-                            'Source': 'Website',
-                            'Status': 'New'
-                        }
-                    };
-                    const res = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Leads`, {
-                        method: 'POST',
-                        headers: { 'Authorization': `Bearer ${AIRTABLE_TOKEN}`, 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    if (!res.ok) throw new Error('Airtable ' + res.status);
-                } else {
-                    const res = await fetch('https://formspree.io/f/mykprola', {
-                        method: 'POST',
-                        body: new FormData(this),
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (!res.ok) throw new Error('Formspree ' + res.status);
-                }
+                const reply = document.getElementById('replyto');
+                if (reply) reply.value = document.getElementById('email').value;
+                const res = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!res.ok) throw new Error('Form submission ' + res.status);
 
-                showToast("Message sent! We'll respond within 24 hours.", 'success');
+                showToast("Message sent! We will review your enquiry.", 'success');
+                if (status) status.textContent = "Your enquiry was submitted. We will review your requirements before confirming availability and pricing.";
                 contactForm.reset();
                 if (window.gtag) gtag('event', 'form_submit', { event_category: 'lead_capture' });
 
             } catch (err) {
                 showToast('Something went wrong. WhatsApp us at +233 247 298 881.', 'error');
+                if (status) status.textContent = 'Submission failed. Your details remain in the form. Please retry or contact us on WhatsApp.';
                 console.error(err);
             } finally {
                 btn.innerHTML = orig;
@@ -264,9 +240,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 const fd = new FormData();
                 fd.append('email', email);
                 fd.append('_subject', 'Newsletter Signup — Neczux Global Group');
-                await fetch('https://formspree.io/f/mykprola', {
+                const res = await fetch('https://formspree.io/f/mykprola', {
                     method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
                 });
+                if (!res.ok) throw new Error('Newsletter submission ' + res.status);
                 showToast('Subscribed! Welcome to the Neczux community.', 'success');
                 if (input) input.value = '';
             } catch {

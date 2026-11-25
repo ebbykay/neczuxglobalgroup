@@ -2222,3 +2222,6 @@ textarea { resize: vertical; min-height: 120px; }
 .training-item i { color: var(--teal); font-size: 1.1rem; margin-top: 0.1rem; flex-shrink: 0; }
 .training-item h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.2rem; }
 .training-item p  { font-size: 0.85rem; }
+
+/* Division architecture: shared responsive components */
+.division-section{padding:3rem 1.5rem}.division-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1.25rem}.division-card{padding:1.5rem;border:1px solid #dce3eb;border-radius:12px;background:#fff;display:flex;flex-direction:column;gap:.75rem}.division-card a{color:#0B1630;text-decoration:underline;text-underline-offset:3px}.division-index{color:#087b76;font-weight:700}.division-intro{background:#0B1630;padding:5rem 0;color:white}.division-intro h1,.division-intro p{color:white}.division-header{padding:1rem 0;background:#F5F7FA}.division-header nav{display:flex;flex-wrap:wrap;gap:1rem}.division-header a{color:#0B1630}.division-card a:focus-visible,.division-header a:focus-visible{outline:3px solid #087b76;outline-offset:4px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
