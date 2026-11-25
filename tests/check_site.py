@@ -26,6 +26,14 @@ for path,page in pages.items():
         if not target.exists(): errors.append(f'{path.name}:{line}: missing {link}')
         elif u.fragment and target in pages and unquote(u.fragment) not in pages[target].ids:
             errors.append(f'{path.name}:{line}: missing fragment {link}')
+# Protect the primary commercial conversion path against accidental deletion.
+contact = pages.get((ROOT / 'contact.html').resolve())
+required = {'contactForm', 'name', 'email', 'service', 'message', 'category', 'training'}
+if contact is None:
+    errors.append('contact.html: missing contact page')
+else:
+    for field in sorted(required - contact.ids):
+        errors.append(f'contact.html: missing required element {field}')
 for error in errors: print(error)
 print(f'Checked {len(pages)} pages; {len(errors)} unresolved references.')
 raise SystemExit(bool(errors))
