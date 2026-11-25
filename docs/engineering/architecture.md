@@ -1,0 +1,5 @@
+# Architecture baseline (proposed)
+Public GitHub Pages site remains separate from private OS. Start with a modular monolith, relational database, server-rendered UI or API-backed UI; choose stack after deployment constraints are confirmed.
+Modules: identity, CRM, sales, delivery, finance, audit. Dependencies flow CRM -> sales -> delivery -> finance; audit cross-cutting. No direct public browser access to private database.
+Entities: User, Role, Lead, Client, Quote, QuoteLine, Engagement, Project, Milestone, Invoice, InvoiceLine, Payment, AuditEvent. Quote belongs to client; engagement references accepted quote version; invoice references engagement; payment references invoice. Use UUIDs, UTC timestamps, currency and decimal amounts, foreign keys and uniqueness constraints. Customer deletion/retention policy pending.
+Trust boundaries: public intake provider -> authorised staff -> private OS -> database/backups. Integration deferred until authenticated webhook and consent controls are validated.
